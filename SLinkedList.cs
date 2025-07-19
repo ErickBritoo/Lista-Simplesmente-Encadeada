@@ -18,6 +18,20 @@
             Size++;
         }
 
+        public string RemoveFirst()
+        {
+            if (Head == null) return new InvalidOperationException("Operação Inválida! Lista vazia").ToString();
+
+            Node removed = Head;
+            Head = Head.Next;
+
+            removed.SetNext(null);
+            Size--;
+
+            return removed.Element;
+        }
+
+
         public Node? GetHead() => Head;
        
     }

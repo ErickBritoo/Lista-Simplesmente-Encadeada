@@ -14,8 +14,20 @@
             lista.AddFirst(node2);
             lista.AddFirst(node3);
 
+
+            ExibirItems(lista);
+            lista.RemoveFirst();
+            lista.RemoveFirst();
+            ExibirItems(lista);
+
+        }
+
+
+        static void ExibirItems(SLinkedList lista)
+        {
             Node? atual = lista.GetHead();
-            while(atual != null)
+
+            while (atual != null)
             {
                 Console.WriteLine(atual);
                 atual = atual.Next;
